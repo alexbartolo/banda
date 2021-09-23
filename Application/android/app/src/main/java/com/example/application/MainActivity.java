@@ -1,4 +1,4 @@
-package com.banda.banda;
+package com.example.application;
 
 import io.flutter.embedding.android.FlutterActivity;
 
