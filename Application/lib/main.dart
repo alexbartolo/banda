@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
+import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -90,15 +90,15 @@ class Servizzi extends State<Test> {
       body: SingleChildScrollView(
           padding: const EdgeInsets.all(12),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              ShortServizzInfo(),
-              ShortServizzInfo(),
-              ShortServizzInfo(),
-              ShortServizzInfo()
-            ]
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                ShortServizzInfo(),
+                ShortServizzInfo(),
+                ShortServizzInfo(),
+                ShortServizzInfo()
+              ]
           )
       ),
       floatingActionButton: FloatingActionButton(
@@ -108,99 +108,99 @@ class Servizzi extends State<Test> {
             backgroundColor: Colors.transparent,
             builder: (BuildContext _) {
               return Container(
-                padding: MediaQuery.of(context).viewInsets,
-                child: Container(
-                  padding: const EdgeInsets.fromLTRB(30, 24, 30, 40),
-                  decoration: const BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), topRight: Radius.circular(20.0))),
-                  child: Wrap(
-                      children: <Widget>[
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text("New Servizz", style: TextStyle(fontSize: 50, color: Colors.white)),
-                            const SizedBox(height: 15),
-                            InputField("Feast", Icons.album_outlined, "text"),
-                            const SizedBox(height: 15),
-                            InputField('Location', Icons.location_on_outlined, "text"),
-                            const SizedBox(height: 15),
-                            Row(
+                  padding: MediaQuery.of(context).viewInsets,
+                  child: Container(
+                      padding: const EdgeInsets.fromLTRB(30, 24, 30, 40),
+                      decoration: const BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), topRight: Radius.circular(20.0))),
+                      child: Wrap(
+                          children: <Widget>[
+                            Column(
                               mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(child: InputField('Date', Icons.calendar_view_week, 'date')),
-                                const SizedBox(width: 10),
-                                Container(
-                                  height: 58.0,
-                                  width: 58.0,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.white, width: 0),
-                                    color: Colors.transparent,
-                                    borderRadius: BorderRadius.all(Radius.circular(20.0))
-                                    //shape: BoxShape.circle,
-                                  ),
-                                  child: IconButton(
-                                    onPressed: () {
-                                      print("Hello");
-                                      // You enter here what you want the button to do once the user interacts with it
-                                    },
-                                    icon: const Icon(
-                                      Icons.email,
-                                      color: Colors.white,
-                                    ),
-                                    iconSize: 20.0,
-                                  ),
-                                )
-                              ]
-                            ),
-                            const SizedBox(height: 15),
-                            Row(
-                                mainAxisSize: MainAxisSize.min,
-                                //crossAxisAlignment: CrossAxisAlignment.stretch,
-                                children: [
-                                  Expanded(child: InputField('Time', Icons.access_time_sharp, "time")),
-                                  const SizedBox(width: 10),
-                                  Container(
-                                    height: 58.0,
-                                    width: 58.0,
-                                    decoration: BoxDecoration(
-                                        border: Border.all(color: Colors.white, width: 0),
-                                        color: Colors.transparent,
-                                        borderRadius: BorderRadius.all(Radius.circular(20.0))
-                                      //shape: BoxShape.circle,
-                                    ),
-                                    child: IconButton(
-                                      onPressed: () {
-                                        print("Hello");
-                                        // You enter here what you want the button to do once the user interacts with it
-                                      },
-                                      icon: const Icon(
-                                        Icons.email,
-                                        color: Colors.white,
-                                      ),
-                                      iconSize: 20.0,
-                                    ),
-                                  )
-                                ]
-                            ),
-                            const SizedBox(height: 15),
-                            InputField('Type of Servizz', Icons.weekend_outlined, "text"),
-                            const SizedBox(height: 30),
-                            Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Button("Add Bandisti"),
-                                  const SizedBox(width: 10),
-                                  Button("Save"),
-                                ]),
+                                const Text("New Servizz", style: TextStyle(fontSize: 50, color: Colors.white)),
+                                const SizedBox(height: 15),
+                                InputField("Feast", Icons.album_outlined, "text"),
+                                const SizedBox(height: 15),
+                                InputField('Location', Icons.location_on_outlined, "text"),
+                                const SizedBox(height: 15),
+                                Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Expanded(child: InputField('Date', Icons.calendar_view_week, 'date')),
+                                      const SizedBox(width: 10),
+                                      Container(
+                                        height: 58.0,
+                                        width: 58.0,
+                                        decoration: BoxDecoration(
+                                            border: Border.all(color: Colors.white, width: 0),
+                                            color: Colors.transparent,
+                                            borderRadius: BorderRadius.all(Radius.circular(20.0))
+                                          //shape: BoxShape.circle,
+                                        ),
+                                        child: IconButton(
+                                          onPressed: () {
+                                            print("Hello");
+                                            // You enter here what you want the button to do once the user interacts with it
+                                          },
+                                          icon: const Icon(
+                                            Icons.email,
+                                            color: Colors.white,
+                                          ),
+                                          iconSize: 20.0,
+                                        ),
+                                      )
+                                    ]
+                                ),
+                                const SizedBox(height: 15),
+                                Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    //crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Expanded(child: InputField('Time', Icons.access_time_sharp, "time")),
+                                      const SizedBox(width: 10),
+                                      Container(
+                                        height: 58.0,
+                                        width: 58.0,
+                                        decoration: BoxDecoration(
+                                            border: Border.all(color: Colors.white, width: 0),
+                                            color: Colors.transparent,
+                                            borderRadius: BorderRadius.all(Radius.circular(20.0))
+                                          //shape: BoxShape.circle,
+                                        ),
+                                        child: IconButton(
+                                          onPressed: () {
+                                            print("Hello");
+                                            // You enter here what you want the button to do once the user interacts with it
+                                          },
+                                          icon: const Icon(
+                                            Icons.email,
+                                            color: Colors.white,
+                                          ),
+                                          iconSize: 20.0,
+                                        ),
+                                      )
+                                    ]
+                                ),
+                                const SizedBox(height: 15),
+                                InputField('Type of Servizz', Icons.weekend_outlined, "text"),
+                                const SizedBox(height: 30),
+                                Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Button("Add Bandisti"),
+                                      const SizedBox(width: 10),
+                                      Button("Save"),
+                                    ]),
 
-                          ],
-                        ),
-                      ]
+                              ],
+                            ),
+                          ]
+                      )
                   )
-                )
               );
             },
             isScrollControlled: true,
@@ -284,60 +284,60 @@ class ShortServizzInfo extends StatelessWidget {
                 backgroundColor: Colors.transparent,
                 builder: (BuildContext _) {
                   return Container(
-                    padding: const EdgeInsets.fromLTRB(30, 12, 30, 30),
-                    decoration: const BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), topRight: Radius.circular(20.0))),
-                    child: Wrap(
-                      children: <Widget>[
-                      Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text("Servizz", style: TextStyle(fontSize: 50, color: Colors.white)),
-                          const SizedBox(height: 15),
-                          Container(
-                            height: 150.0,
-                            width: double.infinity,
-                            decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                                color: Colors.blueAccent
-                            ),
-                            child: const Center(child: Text("Image", style: TextStyle(fontSize: 40, color: Colors.white))),
-                          ),
-                          const SizedBox(height: 15),
-                          const Text("Feast", style: TextStyle(fontSize: 40, color: Colors.white)),
-                          const Text("Feast", style: TextStyle(fontSize: 30, color: Colors.white)),
-                          const SizedBox(height: 15),
-                          const Text("Location", style: TextStyle(fontSize: 40, color: Colors.white)),
-                          const Text("Location", style: TextStyle(fontSize: 30, color: Colors.white)),
-                          const SizedBox(height: 15),
-                          Row(children: const [
-                            Expanded(child: Text("Date", style: TextStyle(fontSize: 40, color: Colors.white))),
-                            Expanded(child: Text("Time", style: TextStyle(fontSize: 40, color: Colors.white))),
-                          ]),
-                          Row(children: const [
-                            Expanded(child: Text("Date", style: TextStyle(fontSize: 30, color: Colors.white))),
-                            Expanded(child: Text("Time", style: TextStyle(fontSize: 30, color: Colors.white))),
-                          ]),
-                          const SizedBox(height: 15),
-                          const Text("Type of Servizz", style: TextStyle(fontSize: 40, color: Colors.white)),
-                          const Text("Type of Servizz", style: TextStyle(fontSize: 30, color: Colors.white)),
-                          const SizedBox(height: 40),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      padding: const EdgeInsets.fromLTRB(30, 12, 30, 30),
+                      decoration: const BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), topRight: Radius.circular(20.0))),
+                      child: Wrap(
+                          children: <Widget>[
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Button("Edit List"),
-                                const SizedBox(width: 10),
-                                Button("View List"),
-                                const SizedBox(width: 10),
-                                Button("Start")
-                          ]),
+                                const Text("Servizz", style: TextStyle(fontSize: 50, color: Colors.white)),
+                                const SizedBox(height: 15),
+                                Container(
+                                  height: 150.0,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                                      color: Colors.blueAccent
+                                  ),
+                                  child: const Center(child: Text("Image", style: TextStyle(fontSize: 40, color: Colors.white))),
+                                ),
+                                const SizedBox(height: 15),
+                                const Text("Feast", style: TextStyle(fontSize: 40, color: Colors.white)),
+                                const Text("Feast", style: TextStyle(fontSize: 30, color: Colors.white)),
+                                const SizedBox(height: 15),
+                                const Text("Location", style: TextStyle(fontSize: 40, color: Colors.white)),
+                                const Text("Location", style: TextStyle(fontSize: 30, color: Colors.white)),
+                                const SizedBox(height: 15),
+                                Row(children: const [
+                                  Expanded(child: Text("Date", style: TextStyle(fontSize: 40, color: Colors.white))),
+                                  Expanded(child: Text("Time", style: TextStyle(fontSize: 40, color: Colors.white))),
+                                ]),
+                                Row(children: const [
+                                  Expanded(child: Text("Date", style: TextStyle(fontSize: 30, color: Colors.white))),
+                                  Expanded(child: Text("Time", style: TextStyle(fontSize: 30, color: Colors.white))),
+                                ]),
+                                const SizedBox(height: 15),
+                                const Text("Type of Servizz", style: TextStyle(fontSize: 40, color: Colors.white)),
+                                const Text("Type of Servizz", style: TextStyle(fontSize: 30, color: Colors.white)),
+                                const SizedBox(height: 40),
+                                Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Button("Edit List"),
+                                      const SizedBox(width: 10),
+                                      Button("View List"),
+                                      const SizedBox(width: 10),
+                                      Button("Start")
+                                    ]),
 
-                        ],
-                      ),
-                    ]
-                  )
+                              ],
+                            ),
+                          ]
+                      )
                   );
                 },
                 isScrollControlled: true,
@@ -415,18 +415,18 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: ElevatedButton(
-        child: Text(buttonText),
-        onPressed: () {},
-        style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 8.0, bottom:8.0),
-            primary: Colors.white,
-            onPrimary: Colors.black,
-            textStyle: const TextStyle(fontSize: 20),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30.0),
+            child: Text(buttonText),
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 8.0, bottom:8.0),
+                primary: Colors.white,
+                onPrimary: Colors.black,
+                textStyle: const TextStyle(fontSize: 20),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                )
             )
         )
-      )
     );
   }
 }
@@ -466,21 +466,43 @@ class InputField extends StatefulWidget {
   State<StatefulWidget> createState() => InputFieldState();
 }
 
+class TextMask {
+  TextInputType textInputType;
+  TextEditingController controller;
+
+  TextMask({required this.textInputType, required this.controller});
+}
+
 class InputFieldState extends State<InputField> {
 
   late TextInputType _textInputType;
-  late MaskTextInputFormatter _maskTextInputFormatter;
+  late var controller;
+
+  final Map textMasks = {
+    'date': TextMask(
+        textInputType: TextInputType.number,
+        controller: MaskedTextController(mask: '00/00/0000')
+    ),
+    'time': TextMask(
+        textInputType: TextInputType.number,
+        controller: MaskedTextController(mask: '00:00')
+    ),
+    'text': TextMask(
+        textInputType: TextInputType.text,
+        controller: TextEditingController()
+    ),
+  };
 
   void chooseType(){
     if (widget.type == "date") {
-      _textInputType = TextInputType.number;
-      _maskTextInputFormatter = MaskTextInputFormatter(mask: "##/##/####");
+      _textInputType = textMasks['date'].textInputType;
+      controller = textMasks['date'].controller;
     } else if (widget.type == "time") {
-      _textInputType = TextInputType.number;
-      _maskTextInputFormatter = MaskTextInputFormatter(mask: "##:##");
+      _textInputType = textMasks['time'].textInputType;
+      controller = textMasks['time'].controller;
     } else if (widget.type == "text") {
-      _textInputType = TextInputType.text;
-      _maskTextInputFormatter = MaskTextInputFormatter(mask: "");
+      _textInputType = textMasks['text'].textInputType;
+      controller = textMasks['text'].controller;
     }
   }
 
@@ -489,9 +511,10 @@ class InputFieldState extends State<InputField> {
     chooseType();
     return TextField(
       style: const TextStyle(color: Colors.white),
+      textCapitalization: TextCapitalization.words,
       keyboardType: _textInputType,
-      controller: TextEditingController(),
-      inputFormatters: [_maskTextInputFormatter],
+      controller: controller,
+      //inputFormatters: [_maskTextInputFormatter.getMask()],
       decoration: InputDecoration(
         enabledBorder:  OutlineInputBorder(
           borderSide: const BorderSide(color: Colors.white, width: 0.0),
